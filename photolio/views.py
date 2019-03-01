@@ -9,3 +9,7 @@ def index(request):
     print(Images)
     return render(request,'index.html',{'images':images,'location':location})
 # Create your views here.
+
+def search_by_cartegory(cls,search_term):
+        Images = cls.objects.filter(title__icontains=search_term)
+        return Images
