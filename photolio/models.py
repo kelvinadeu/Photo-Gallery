@@ -22,6 +22,7 @@ class Location(models.Model):
         self.save()
 
 class Images(models.Model):
+    Images=models.ImageField(upload_to='Images/')
     Images_name = models.CharField(max_length = 40)
     Images_description =models.TextField()
     Images_Cartegory = models.ForeignKey(Cartegory)
