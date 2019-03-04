@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^photolio/',include('photolio.urls'))
+    url(r'',include('photolio.urls'))
 ]
