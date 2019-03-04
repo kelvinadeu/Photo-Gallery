@@ -14,10 +14,13 @@ def search_cartegory(request):
 
     if 'cartegory' in request.GET and request.GET["cartegory"]:
         search_term = request.GET.get("cartegory")
-        searched_images = Images.search_by_cartegory(search_term)
-        message = f"{search_term}"
+        searched_images = Cartegory.objects.filter(name=search_term)
+        images = [images.id for images in searched_images]
+        # print(images)
+        image = Images.objects.filter(id__in=images)
 
-        return render(request, 'search.html',{"message":message,"images": searched_images,"location":location})
+
+        return render(request, 'search.html',locals())
 
     else:
         message = "You haven't searched for any cartegory"
