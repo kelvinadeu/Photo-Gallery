@@ -2,7 +2,6 @@
 
 {% block content %}
 {{block.super}}
-<div class="row">
 
   <!-- Looping through images   -->
   {% for Images_item in images %}
@@ -10,7 +9,7 @@
   <div class="col-md-4" style="">
     <img style=" margin-top: 20px; margin-bottom: 20px; width:400px; height:400px;" src="{{Images_item.Images.url}}" class="img-rounded" alt="Image" data-toggle="modal" data-target="#{{Images_item.id}}">
 
-  </div>
+  
   <div class="modal fade" id="{{Images_item.id}}" role="dialog" style="background-image:url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/whatisspacet.jpg');">
     <div class="modal-dialog">
 
