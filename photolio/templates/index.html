@@ -8,47 +8,47 @@
   {% for Images_item in images %}
   <!--Display  images  -->
   <div class="col-md-4" style="">
-    <img style=" margin-top: 20px; margin-bottom: 20px; width:400px; height:400px;" src="{{Images_item.Images.url}}" class="img-rounded" alt="Image"  data-toggle="modal" data-target="#{{Images_item.id}}">
+    <img style=" margin-top: 20px; margin-bottom: 20px; width:400px; height:400px;" src="{{Images_item.Images.url}}" class="img-rounded" alt="Image" data-toggle="modal" data-target="#{{Images_item.id}}">
 
   </div>
-  <div class="modal fade" id="{{Images_item.id}}" role="dialog" style="background-image:url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/whatisspacet.jpg');" >
-  <div class="modal-dialog">
+  <div class="modal fade" id="{{Images_item.id}}" role="dialog" style="background-image:url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/whatisspacet.jpg');">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
+      <!-- Modal content-->
+      <div class="modal-content">
 
-      <div class="modal-header">
+        <div class="modal-header">
 
           <h2 class="text-center">{{Images_item.Images_name}}</h2>
 
 
+        </div>
+
+
+        <img src="{{Images_item.Images.url}}">
+
+
+        <h3 class="text-center">Category: {{ Images_item.Images_Cartegory}} </h3>
+
+
+        <h3 class="text-center">Location: {{ Images_item.Images_Location}} </h3>
+
+
+        <h3 class="text-center" style="font-family: 'Loved by the King', cursive;"> <strong>Description:</strong>{{ Images_item.Images_description}} </h3>
+
+
+        <div class="modal-footer">
+          <form>
+            <input class="form-control" type="text" id="link" value="http://127.0.0.1:8000{{image.image.url}}">
+            <button onclick="copyLink()" class="btn btn-outline-primary">Copy link</button>
+            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+          </form>
+
+        </div>
       </div>
 
-
-          <img src="{{Images_item.Images.url}}" >
-
-
-          <h3 class="text-center">Category: {{ Images_item.Images_Cartegory}} </h3>
-
-
-          <h3 class="text-center">Location: {{ Images_item.Images_Location}} </h3>
-
-
-         <h3 class="text-center" style="font-family: 'Loved by the King', cursive;">  <strong>Description:</strong>{{ Images_item.Images_description}} </h3>
-
-
-      <div class="modal-footer">
-        <form >
-          <input class="form-control" type="text" id="link" value="http://127.0.0.1:8000{{image.image.url}}" >
-          <button  onclick="copyLink()"  class="btn btn-outline-primary" >Copy link</button>
-          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-        </form>
-
-      </div>
     </div>
-
   </div>
-</div>
 
 </div>
 
@@ -70,15 +70,15 @@
 </div>
 </div>
 <script>
-    function copyLink() {
+  function copyLink() {
     /* Get the text field */
-    var copyText = document.getElementById( "link" );
+    var copyText = document.getElementById("link");
     /* Select the text field */
     copyText.select();
     /* Copy the text inside the text field */
-    document.execCommand( "copy" );
+    document.execCommand("copy");
     /* Alert the copied text */
-    alert( "Ready to share the link: " + copyText.value );
+    alert("Ready to share the link: " + copyText.value);
   }
 </script>
 
