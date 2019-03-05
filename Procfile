@@ -1,1 +1,1 @@
-web: gunicorn Galore.wsgi
+web: gunicorn photolio.wsgi
