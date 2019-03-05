@@ -12,3 +12,5 @@
 #### the program should display various pictures:
 
 ##### .on page load various photos are displayed
+
+####  the photos should navigate through various Photos for a specified location and category 
