@@ -10,3 +10,5 @@
 # Behavior Driven Development
 
 #### the program should display various pictures:
+
+##### .on page load various photos are displayed
