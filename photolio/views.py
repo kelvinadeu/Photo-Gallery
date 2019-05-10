@@ -10,6 +10,12 @@ def index(request):
     return render(request,'index.html',{'images':images,'location':location})
 # Create your views here.
 
+
+
+def sport(request):
+    # sports=Images.objects.filter_by()
+    return render(request,'sports.html',)
+
 def search_cartegory(request):
 
     if 'cartegory' in request.GET and request.GET["cartegory"]:
